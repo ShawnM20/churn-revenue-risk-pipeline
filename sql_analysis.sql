@@ -23,19 +23,6 @@ GROUP BY c.contract
 ORDER BY total_revenue_at_risk DESC;
 
 
--- Sentiment vs churn correlation
-SELECT
-    s.sentiment,
-    COUNT(*) AS customers,
-    SUM(c.churn) AS churned,
-    ROUND(SUM(c.churn) * 100.0 / COUNT(*), 1) AS churn_rate_pct,
-    ROUND(AVG(s.polarity), 3) AS avg_polarity
-FROM sentiment_scores s
-JOIN customers c ON s.customer_id = c.customer_id
-GROUP BY s.sentiment
-ORDER BY churn_rate_pct DESC;
-
-
 -- High risk customers (top revenue at risk)
 SELECT
     p.customer_id,
