@@ -45,7 +45,7 @@ End-to-end pipeline that loads 7,043 telecom customers into SQLite, scores each 
 | `predict.py` | Trains and cross-validates the model, saves predictions, exports the CSV |
 | `sql_analysis.sql` | Churn and revenue-at-risk analysis queries |
 | `telecom_churn.csv` | Source data |
-| `Customer_Churn__Revenue_Risk_Dashboard.twbx` | Tableau dashboard |
+| `Customer Churn & Revenue Risk Dashboard.twbx` | Tableau dashboard |
 | `requirements.txt` | Python packages |
 
 ## How to run
